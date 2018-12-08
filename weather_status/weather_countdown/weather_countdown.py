@@ -104,7 +104,7 @@ screen = pygame.display.set_mode([cam_width, cam_height],pygame.NOFRAME) # Set u
 while True:
     screen.fill(black)
 ### Count down code
-    lastImg = pygame.image.load('/home/pi/zero_boot_system/weather_status/weather_countdown/xmas1.jpg') # Load up the photo you just took
+    lastImg = pygame.image.load('/home/pi/zero_boot_system_apps/weather_status/weather_countdown/xmas1.jpg') # Load up the photo you just took
     scalePhoto = pygame.transform.scale(lastImg, (240, 250)) # Scale to fit scr    een
     screen.blit(scalePhoto, (240,30))
 

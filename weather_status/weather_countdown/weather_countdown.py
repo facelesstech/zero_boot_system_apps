@@ -216,25 +216,21 @@ while True:
 
     if 1 <= takeTemp <= 1.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
-        pygame.display.update() # Update screen
 
     elif 2 <= takeTemp <= 2.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
-        pygame.display.update() # Update screen
 
     elif 3 <= takeTemp <= 3.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
-        pygame.display.update() # Update screen
 
     elif 4 <= takeTemp <= 4.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
-        pygame.display.update() # Update screen
 
     elif 5 <= takeTemp <= 5.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
@@ -242,7 +238,6 @@ while True:
         pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
-        pygame.display.update() # Update screen
 
     elif 6 <= takeTemp <= 6.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
@@ -251,7 +246,6 @@ while True:
         pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
-        pygame.display.update() # Update screen
 
     elif 7 <= takeTemp <= 7.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
@@ -261,7 +255,6 @@ while True:
         pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
-        pygame.display.update() # Update screen
 
     elif 8 <= takeTemp <= 8.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
@@ -272,7 +265,6 @@ while True:
         pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
-#        pygame.display.update() # Update screen
 
     elif 9 <= takeTemp <= 9.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
@@ -284,7 +276,6 @@ while True:
         pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [383, 285, 40, 40])
-#        pygame.display.update() # Update screen
 
     elif 10 <= takeTemp <= 10.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
@@ -297,7 +288,6 @@ while True:
         pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [383, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [430, 285, 40, 40])
-#        pygame.display.update() # Update screen
 
     pygame.draw.rect(screen, white, [7, 285, 40, 34], 2)
     pygame.draw.rect(screen, white, [54, 285, 40, 34], 2)

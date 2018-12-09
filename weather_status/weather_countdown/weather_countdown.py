@@ -95,8 +95,6 @@ myFontBig = pygame.font.SysFont('freesansbold.ttf', 70)
 myFontNumber = pygame.font.SysFont('freesansbold.ttf', 80)
 myFontTopbar = pygame.font.SysFont('freesansbold.ttf', 30)
 bigfont = pygame.font.SysFont('freesansbold.ttf', 100)
-#smallfont = pygame.font.SysFont('freesansbold.ttf', 30)
-#mediumfont = pygame.font.SysFont('freesansbold.ttf', 50)
 
 pygame.mouse.set_visible(False) # Turned off the mouse pointer
 screen = pygame.display.set_mode([cam_width, cam_height],pygame.NOFRAME) # Set up the screen without a window boarder 
@@ -194,9 +192,6 @@ while True:
 ### Temp section
     convertTemp = 0
     tempColour = red
-    firstAddon = 5
-#    addon = 10
-    addon = 15 
     pygame.draw.aaline(screen, white, [480, 280],[0, 280], True)
 
     if ( current.temperature <= 0):
@@ -220,89 +215,100 @@ while True:
         takeTemp = current.temperature-30
 
     if 1 <= takeTemp <= 1.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 2 <= takeTemp <= 2.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 3 <= takeTemp <= 3.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [90+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 4 <= takeTemp <= 4.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [90+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [135+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 5 <= takeTemp <= 5.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [90+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [135+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [180+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 6 <= takeTemp <= 6.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [90+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [135+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [180+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [225+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 7 <= takeTemp <= 7.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [90+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [135+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [180+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [225+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [270+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 8 <= takeTemp <= 8.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [90+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [135+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [180+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [225+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [270+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [315+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 9 <= takeTemp <= 9.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [90+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [135+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [180+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [225+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [270+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [315+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [360+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [383, 285, 40, 40])
         pygame.display.update() # Update screen
 
     elif 10 <= takeTemp <= 10.9:
-        pygame.draw.rect(screen, tempColour, [addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [45+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [90+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [135+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [180+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [225+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [270+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [315+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [360+addon, 285, 40, 40])
-        pygame.draw.rect(screen, tempColour, [405+addon, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [54, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [101, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [148, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [195, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [383, 285, 40, 40])
+        pygame.draw.rect(screen, tempColour, [430, 285, 40, 40])
         pygame.display.update() # Update screen
+
+    pygame.draw.rect(screen, white, [7, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [54, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [101, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [148, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [195, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [242, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [289, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [336, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [383, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [430, 285, 40, 34], 2)
 
     pygame.display.update() # Update screen
 

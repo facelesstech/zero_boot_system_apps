@@ -192,6 +192,7 @@ while True:
 ### Temp section
     convertTemp = 0
     tempColour = red
+    takeTemp = 0
     pygame.draw.aaline(screen, white, [480, 280],[0, 280], True)
 
     if ( current.temperature <= 0):
@@ -202,15 +203,15 @@ while True:
         tempColour = lightBlue
         takeTemp = current.temperature
 
-    elif ( 11 < current.temperature <= 19.9):
+    elif ( 11 <= current.temperature <= 19.9):
         tempColour = yellow 
         takeTemp = current.temperature-10
 
-    elif ( 20 < current.temperature <= 29.9):
+    elif ( 20 <= current.temperature <= 29.9):
         tempColour = orange 
         takeTemp = current.temperature-20
 
-    elif ( 30 < current.temperature <= 39.9):
+    elif ( 30 <= current.temperature <= 39.9):
         tempColour = red 
         takeTemp = current.temperature-30
 

@@ -194,17 +194,6 @@ while True:
     tempColour = red
     pygame.draw.aaline(screen, white, [480, 280],[0, 280], True)
 
-    pygame.draw.rect(screen, white, [7, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [54, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [101, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [148, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [195, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [242, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [289, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [336, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [383, 285, 40, 34], 2)
-    pygame.draw.rect(screen, white, [430, 285, 40, 34], 2)
-
     if ( current.temperature <= 0):
         tempColour = blue
         takeTemp = current.temperature
@@ -283,7 +272,7 @@ while True:
         pygame.draw.rect(screen, tempColour, [242, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
-        pygame.display.update() # Update screen
+#        pygame.display.update() # Update screen
 
     elif 9 <= takeTemp <= 9.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
@@ -295,7 +284,7 @@ while True:
         pygame.draw.rect(screen, tempColour, [289, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [383, 285, 40, 40])
-        pygame.display.update() # Update screen
+#        pygame.display.update() # Update screen
 
     elif 10 <= takeTemp <= 10.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
@@ -308,7 +297,19 @@ while True:
         pygame.draw.rect(screen, tempColour, [336, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [383, 285, 40, 40])
         pygame.draw.rect(screen, tempColour, [430, 285, 40, 40])
-        pygame.display.update() # Update screen
+#        pygame.display.update() # Update screen
+
+    pygame.draw.rect(screen, white, [7, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [54, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [101, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [148, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [195, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [242, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [289, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [336, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [383, 285, 40, 34], 2)
+    pygame.draw.rect(screen, white, [430, 285, 40, 34], 2)
+
 
 
     pygame.display.update() # Update screen

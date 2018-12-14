@@ -198,6 +198,7 @@ while True:
     if ( current.temperature <= 0):
         tempColour = blue
         takeTemp = current.temperature
+        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
 
     if ( 0.1 <= current.temperature <= 10.9):
         tempColour = lightBlue

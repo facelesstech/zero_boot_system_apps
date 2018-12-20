@@ -147,8 +147,12 @@ while True:
 #        print byHour.temperature
 #        print current.summary
 #        print current.icon
-#        print current.temperature
-        #string_temp = "%d" % current.temperature
+#        print round(current.temperature)
+        roundedUp =  round(current.temperature)
+#        string_temp_test = "%d" % current.temperature
+#        print string_temp_test
+#        print string_temp_test
+        takeTemp = current.temperature
         string_temp = "%.1fC" % current.temperature
         string_feeltemp = "%.1fC" % current.apparentTemperature
 
@@ -195,26 +199,27 @@ while True:
     takeTemp = 0
     pygame.draw.aaline(screen, white, [480, 280],[0, 280], True)
 
-    if ( current.temperature <= 0):
+    if ( roundedUp <= 0):
         tempColour = blue
-        takeTemp = current.temperature
+        takeTemp = roundedUp
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
 
-    if ( 0.1 <= current.temperature <= 10.9):
+    if ( 0.1 <= roundedUp <= 10.9):
         tempColour = lightBlue
-        takeTemp = current.temperature
+        takeTemp = roundedUp
+#        takeTemp = string_temp_test
 
-    elif ( 11 <= current.temperature <= 19.9):
+    elif ( 11 <= roundedUp <= 19.9):
         tempColour = yellow 
-        takeTemp = current.temperature-10
+        takeTemp = roundedUp-10
 
-    elif ( 20 <= current.temperature <= 29.9):
+    elif ( 20 <= roundedUp <= 29.9):
         tempColour = orange 
-        takeTemp = current.temperature-20
+        takeTemp = roundedUp-20
 
-    elif ( 30 <= current.temperature <= 39.9):
+    elif ( 30 <= roundedUp <= 39.9):
         tempColour = red 
-        takeTemp = current.temperature-30
+        takeTemp = roundedUp-30
 
     if 1 <= takeTemp <= 1.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])

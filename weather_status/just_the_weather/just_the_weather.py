@@ -161,8 +161,8 @@ while True:
 
     if ( roundedUp <= 0):
         tempColour = blue
-        takeTemp = roundedUp
-        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
+        takeTemp = abs(roundedUp)
+#        pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
 
     if ( 0.1 <= roundedUp <= 10.9):
         tempColour = lightBlue

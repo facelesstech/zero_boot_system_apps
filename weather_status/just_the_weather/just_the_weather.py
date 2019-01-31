@@ -181,7 +181,8 @@ while True:
         tempColour = red 
         takeTemp = roundedUp-30
 
-    if 1 <= takeTemp <= 1.9:
+#    if 1 <= takeTemp <= 1.9:
+    if 0 <= takeTemp <= 1.9:
         pygame.draw.rect(screen, tempColour, [7, 285, 40, 40])
 
     elif 2 <= takeTemp <= 2.9:

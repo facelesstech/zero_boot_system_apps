@@ -143,7 +143,17 @@ while True:
 #        textFeelTemp = myFontMid.render(string_temp, True, white) # Draw text
 #        screen.blit(textFeelTemp,(100,80)) # Draw text
 
-        textSummary = myFontSmall.render(current.summary, True, white) # Draw text
+#        textSummary = myFontSmall.render(current.summary, True, white) # Draw text
+##        screen.blit(textSummary,(10,120)) # Draw text
+#        screen.blit(textSummary,(10,80)) # Draw text
+        if current.summary == "Breezy and Mostly Cloudy":
+            newCurrent = "Breezy and \nMostly Cloudy"
+
+        else:
+            newCurrent = current.summary
+            
+
+        textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
 #        screen.blit(textSummary,(10,120)) # Draw text
         screen.blit(textSummary,(10,80)) # Draw text
 

@@ -153,7 +153,7 @@ while True:
             screen.blit(textSummaryFirst,(10,80)) # Draw text
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
-            screen.blit(textSummarySecond,(10,100)) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
 
         elif current.summary == "Breezy and Partly Cloudy":
             newCurrentFirst = "Breezy and"
@@ -162,7 +162,7 @@ while True:
             screen.blit(textSummaryFirst,(10,80)) # Draw text
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
-            screen.blit(textSummarySecond,(10,100)) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
 
         elif current.summary == "Windy and Partly Cloudy":
             newCurrentFirst = "Windy and"
@@ -171,7 +171,7 @@ while True:
             screen.blit(textSummaryFirst,(10,80)) # Draw text
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
-            screen.blit(textSummarySecond,(10,100)) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
 
         elif current.summary == "Windy and Mostly Cloudy":
             newCurrentFirst = "Windy and"
@@ -180,7 +180,7 @@ while True:
             screen.blit(textSummaryFirst,(10,80)) # Draw text
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
-            screen.blit(textSummarySecond,(10,100)) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
 
         elif current.summary == "Dangerously Windy and Partly Cloudy":
             newCurrentFirst = "Dangerously Windy and"
@@ -189,7 +189,7 @@ while True:
             screen.blit(textSummaryFirst,(10,80)) # Draw text
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
-            screen.blit(textSummarySecond,(10,100)) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
 
         elif current.summary == "Light Rain and Windy":
             newCurrentFirst = "Light Rain"
@@ -198,7 +198,7 @@ while True:
             screen.blit(textSummaryFirst,(10,80)) # Draw text
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
-            screen.blit(textSummarySecond,(10,100)) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
 
         else:
             newCurrent = current.summary

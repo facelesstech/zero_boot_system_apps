@@ -149,6 +149,9 @@ while True:
         if current.summary == "Breezy and Mostly Cloudy":
             newCurrent = "Breezy and \nMostly Cloudy"
 
+        elif current.summary == "Breezy and Partly Cloudy":
+            newCurrent = "Breezy and \nPartly Cloudy"
+
         else:
             newCurrent = current.summary
             

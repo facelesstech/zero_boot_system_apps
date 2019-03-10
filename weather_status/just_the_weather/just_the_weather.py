@@ -102,10 +102,10 @@ while True:
         forecast = forecastio.load_forecast(api_key, lat, lng)
         byHour = forecast.hourly()
         current = forecast.currently()
-        print byHour.summary
+#        print byHour.summary
         print byHour.icon
 #        print byHour.temperature
-#        print current.summary
+        print current.summary
 #        print current.icon
 #        print round(current.temperature)
         roundedUp =  round(current.temperature)

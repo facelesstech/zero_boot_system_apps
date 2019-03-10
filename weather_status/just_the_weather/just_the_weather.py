@@ -138,13 +138,14 @@ while True:
         textTemp = myFontMid.render(string_temp, True, white) # Draw text
         screen.blit(textTemp,(100,40)) # Draw text
 
-        feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
-        screen.blit(feelsTempText,(10,80)) # Draw text
-        textFeelTemp = myFontMid.render(string_temp, True, white) # Draw text
-        screen.blit(textFeelTemp,(100,80)) # Draw text
+#        feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
+#        screen.blit(feelsTempText,(10,80)) # Draw text
+#        textFeelTemp = myFontMid.render(string_temp, True, white) # Draw text
+#        screen.blit(textFeelTemp,(100,80)) # Draw text
 
         textSummary = myFontSmall.render(current.summary, True, white) # Draw text
-        screen.blit(textSummary,(10,120)) # Draw text
+#        screen.blit(textSummary,(10,120)) # Draw text
+        screen.blit(textSummary,(10,80)) # Draw text
 
 #        textExit = smallfont.render("exit", True, white) # Draw text
 #        screen.blit(textExit,(430,290)) # Draw text

@@ -167,13 +167,13 @@ while True:
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,100)) # Draw text
 
-        else:
-            newCurrent = current.summary
-            
-
-        textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
-#        screen.blit(textSummary,(10,120)) # Draw text
-        screen.blit(textSummary,(10,80)) # Draw text
+#        else:
+#            newCurrent = current.summary
+#            
+#
+#        textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
+##        screen.blit(textSummary,(10,120)) # Draw text
+#        screen.blit(textSummary,(10,80)) # Draw text
 
 #        textExit = smallfont.render("exit", True, white) # Draw text
 #        screen.blit(textExit,(430,290)) # Draw text

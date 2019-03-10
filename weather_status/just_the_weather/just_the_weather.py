@@ -150,7 +150,22 @@ while True:
             newCurrent = "Breezy and \nMostly Cloudy"
 
         elif current.summary == "Breezy and Partly Cloudy":
-            newCurrent = "Breezy and \nPartly Cloudy"
+            newCurrentFirst = "Breezy and"
+            newCurrentSecond = "Partly Cloudy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,100)) # Draw text
+
+        elif current.summary == "Windy and Partly Cloudy":
+            newCurrentFirst = "Windy and"
+            newCurrentSecond = "Partly Cloudy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,100)) # Draw text
 
         else:
             newCurrent = current.summary

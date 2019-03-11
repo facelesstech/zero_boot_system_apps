@@ -125,7 +125,7 @@ while True:
             counter = counter - 1
 
             ### This will be updated once per second
-            print "%s seconds remaining" % counter
+#            print "%s seconds remaining" % counter
                                                                                         ### Countdown finished, ending loop
             if counter <= 0:
                 print "done"

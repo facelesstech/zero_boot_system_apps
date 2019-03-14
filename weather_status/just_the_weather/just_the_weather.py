@@ -138,14 +138,6 @@ while True:
         textTemp = myFontMid.render(string_temp, True, white) # Draw text
         screen.blit(textTemp,(100,40)) # Draw text
 
-#        feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
-#        screen.blit(feelsTempText,(10,80)) # Draw text
-#        textFeelTemp = myFontMid.render(string_temp, True, white) # Draw text
-#        screen.blit(textFeelTemp,(100,80)) # Draw text
-
-#        textSummary = myFontSmall.render(current.summary, True, white) # Draw text
-##        screen.blit(textSummary,(10,120)) # Draw text
-#        screen.blit(textSummary,(10,80)) # Draw text
         if current.summary == "Breezy and Mostly Cloudy":
             newCurrentFirst = "Breezy and"
             newCurrentSecond = "Mostly Cloudy"
@@ -205,11 +197,7 @@ while True:
             
 
             textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
-    #        screen.blit(textSummary,(10,120)) # Draw text
             screen.blit(textSummary,(10,80)) # Draw text
-
-#        textExit = smallfont.render("exit", True, white) # Draw text
-#        screen.blit(textExit,(430,290)) # Draw text
 
         iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
         scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen

@@ -106,7 +106,7 @@ while True:
     scalePhoto = pygame.transform.scale(lastImg, (240, 250)) # Scale to fit scr    een
     screen.blit(scalePhoto, (240,30))
 
-    leaving_date = datetime.strptime('2019-01-01 00:00:00', '%Y-%m-%d %H:%M:%S')
+    leaving_date = datetime.strptime('2020-01-01 00:00:00', '%Y-%m-%d %H:%M:%S')
     now = datetime.now()
 #    stringTime = "%02d - %02d:%02d:%02d" % daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
     stringDays = "%02d" % justDays(dateDiffInSeconds(now, leaving_date))

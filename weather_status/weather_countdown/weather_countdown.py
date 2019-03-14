@@ -178,16 +178,76 @@ while True:
         textTemp = myFontMid.render(string_temp, True, white) # Draw text
         screen.blit(textTemp,(100,40)) # Draw text
 
-        feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
-        screen.blit(feelsTempText,(10,80)) # Draw text
-        textFeelTemp = myFontMid.render(string_temp, True, white) # Draw text
-        screen.blit(textFeelTemp,(100,80)) # Draw text
+#        feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
+#        screen.blit(feelsTempText,(10,80)) # Draw text
+#        textFeelTemp = myFontMid.render(string_temp, True, white) # Draw text
+#        screen.blit(textFeelTemp,(100,80)) # Draw text
 
-        textSummary = myFontSmall.render(current.summary, True, white) # Draw text
-        screen.blit(textSummary,(10,120)) # Draw text
+#        textSummary = myFontSmall.render(current.summary, True, white) # Draw text
+#        screen.blit(textSummary,(10,120)) # Draw text
 
 #        textExit = smallfont.render("exit", True, white) # Draw text
 #        screen.blit(textExit,(430,290)) # Draw text
+        if current.summary == "Breezy and Mostly Cloudy":
+            newCurrentFirst = "Breezy and"
+            newCurrentSecond = "Mostly Cloudy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+
+        elif current.summary == "Breezy and Partly Cloudy":
+            newCurrentFirst = "Breezy and"
+            newCurrentSecond = "Partly Cloudy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+
+        elif current.summary == "Windy and Partly Cloudy":
+            newCurrentFirst = "Windy and"
+            newCurrentSecond = "Partly Cloudy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+
+        elif current.summary == "Windy and Mostly Cloudy":
+            newCurrentFirst = "Windy and"
+            newCurrentSecond = "Mostly Cloudy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+
+        elif current.summary == "Dangerously Windy and Partly Cloudy":
+            newCurrentFirst = "Dangerously Windy and"
+            newCurrentSecond = "Partly Cloudy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+
+        elif current.summary == "Light Rain and Windy":
+            newCurrentFirst = "Light Rain"
+            newCurrentSecond = "and Windy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+
+        else:
+            newCurrent = current.summary
+            
+
+            textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
+            screen.blit(textSummary,(10,80)) # Draw text
 
         iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
         scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen

@@ -199,9 +199,13 @@ while True:
             textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
             screen.blit(textSummary,(10,80)) # Draw text
 
-        iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
+        iconLoad = pygame.image.load(icon_mapping(newCurrent.icon, 256))# Load up the photo you just took
         scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
         screen.blit(scaleIcon, (iconPosX, iconPosY)) 
+
+#        iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
+#        scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
+#        screen.blit(scaleIcon, (iconPosX, iconPosY)) 
 
 ### Temp section
     convertTemp = 0

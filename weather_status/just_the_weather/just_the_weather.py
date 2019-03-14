@@ -12,7 +12,7 @@ iconSizex = 150
 iconSizey = 150
 iconPosX = 0
 iconPosY = 140
-iconFlag = False
+iconFlag = True
 
 showIt = 0
 getWeather = 0
@@ -185,6 +185,7 @@ while True:
             screen.blit(textSummarySecond,(10,110)) # Draw text
 
         elif current.summary == "Light Rain and Windy":
+            iconFlag = False 
             newCurrentFirst = "Light Rain"
             newCurrentSecond = "and Windy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
@@ -194,9 +195,9 @@ while True:
             screen.blit(textSummarySecond,(10,110)) # Draw text
 
         else:
+#            iconFlag = True
+            iconFlag = False
             newCurrent = current.summary
-            
-
             textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
             screen.blit(textSummary,(10,80)) # Draw text
 

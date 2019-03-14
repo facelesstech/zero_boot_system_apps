@@ -205,7 +205,8 @@ while True:
             scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
             screen.blit(scaleIcon, (iconPosX, iconPosY)) 
             
-        else iconFlag == False:
+#        else iconFlag == False:
+        else:
 
             iconLoad = pygame.image.load(icon_mapping(newCurrent.icon, 256))# Load up the photo you just took
             scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen

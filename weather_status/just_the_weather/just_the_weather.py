@@ -12,7 +12,7 @@ iconSizex = 150
 iconSizey = 150
 iconPosX = 0
 iconPosY = 140
-iconFlag = True
+iconFlag = False
 
 showIt = 0
 getWeather = 0

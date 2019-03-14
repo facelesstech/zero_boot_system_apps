@@ -106,7 +106,7 @@ while True:
     scalePhoto = pygame.transform.scale(lastImg, (240, 250)) # Scale to fit scr    een
     screen.blit(scalePhoto, (240,30))
 
-    leaving_date = datetime.strptime('2018-12-25 00:00:00', '%Y-%m-%d %H:%M:%S')
+    leaving_date = datetime.strptime('2019-12-25 00:00:00', '%Y-%m-%d %H:%M:%S')
     now = datetime.now()
     stringDays = "%02d" % justDays(dateDiffInSeconds(now, leaving_date))
     stringTime = "%02d:%02d:%02d" % daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
@@ -165,7 +165,7 @@ while True:
             counter = counter - 1
 
             ### This will be updated once per second
-            print "%s seconds remaining" % counter
+#            print "%s seconds remaining" % counter
                                                                                         ### Countdown finished, ending loop
             if counter <= 0:
                 print "done"
@@ -178,16 +178,6 @@ while True:
         textTemp = myFontMid.render(string_temp, True, white) # Draw text
         screen.blit(textTemp,(100,40)) # Draw text
 
-#        feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
-#        screen.blit(feelsTempText,(10,80)) # Draw text
-#        textFeelTemp = myFontMid.render(string_temp, True, white) # Draw text
-#        screen.blit(textFeelTemp,(100,80)) # Draw text
-
-#        textSummary = myFontSmall.render(current.summary, True, white) # Draw text
-#        screen.blit(textSummary,(10,120)) # Draw text
-
-#        textExit = smallfont.render("exit", True, white) # Draw text
-#        screen.blit(textExit,(430,290)) # Draw text
         if current.summary == "Breezy and Mostly Cloudy":
             newCurrentFirst = "Breezy and"
             newCurrentSecond = "Mostly Cloudy"

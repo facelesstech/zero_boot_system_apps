@@ -145,47 +145,45 @@ while True:
             newCurrentSecond = "Mostly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
             screen.blit(textSummaryFirst,(10,80)) # Draw text
-
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
-            current.icon = "cloudy"
+            current.icon = 'cloudy'
 
         elif current.summary == "Breezy and Partly Cloudy":
             newCurrentFirst = "Breezy and"
             newCurrentSecond = "Partly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
             screen.blit(textSummaryFirst,(10,80)) # Draw text
-
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
-
+            current.icon = 'partly-cloudy-day'
 
         elif current.summary == "Windy and Partly Cloudy":
             newCurrentFirst = "Windy and"
             newCurrentSecond = "Partly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
             screen.blit(textSummaryFirst,(10,80)) # Draw text
-
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
+            current.icon = 'partly-cloudy-day'
 
         elif current.summary == "Windy and Mostly Cloudy":
             newCurrentFirst = "Windy and"
             newCurrentSecond = "Mostly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
             screen.blit(textSummaryFirst,(10,80)) # Draw text
-
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
+            current.icon = 'cloudy'
 
         elif current.summary == "Dangerously Windy and Partly Cloudy":
             newCurrentFirst = "Dangerously Windy and"
             newCurrentSecond = "Partly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
             screen.blit(textSummaryFirst,(10,80)) # Draw text
-
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
+            current.icon = 'partly-cloudy-day'
 
         elif current.summary == "Light Rain and Windy":
 #            iconFlag = False 
@@ -193,33 +191,17 @@ while True:
             newCurrentSecond = "and Windy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
             screen.blit(textSummaryFirst,(10,80)) # Draw text
-
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
+            current.icon = 'wind'
 
         else:
-#            iconFlag = True
-#            iconFlag = False
-#            newCurrent = current.summary
-#            textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
             textSummary = myFontSmall.render(current.summary, True, white) # Draw text
             screen.blit(textSummary,(10,80)) # Draw text
 
         iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
         scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
         screen.blit(scaleIcon, (iconPosX, iconPosY)) 
-
-#        if iconFlag == True:
-#
-#            iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
-#            scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
-#            screen.blit(scaleIcon, (iconPosX, iconPosY)) 
-#            
-#        else:
-
-#        iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
-#        scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
-#        screen.blit(scaleIcon, (iconPosX, iconPosY)) 
 
 ### Temp section
     convertTemp = 0

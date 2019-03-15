@@ -105,10 +105,10 @@ while True:
         byHour = forecast.hourly()
         current = forecast.currently()
 #        print byHour.summary
-        print byHour.icon
+#        print byHour.icon
 #        print byHour.temperature
         print current.summary
-#        print current.icon
+        print current.icon
 #        print round(current.temperature)
         roundedUp =  round(current.temperature)
 #        string_temp_test = "%d" % current.temperature
@@ -148,7 +148,7 @@ while True:
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
-            newCurrent = "cloudy"
+            current.icon = "cloudy"
 
         elif current.summary == "Breezy and Partly Cloudy":
             newCurrentFirst = "Breezy and"
@@ -158,6 +158,7 @@ while True:
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
+
 
         elif current.summary == "Windy and Partly Cloudy":
             newCurrentFirst = "Windy and"
@@ -199,11 +200,10 @@ while True:
         else:
 #            iconFlag = True
 #            iconFlag = False
-            newCurrent = current.summary
             textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
             screen.blit(textSummary,(10,80)) # Draw text
 
-        iconLoad = pygame.image.load(icon_mapping(newCurrent.icon, 256))# Load up the photo you just took
+        iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
         scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
         screen.blit(scaleIcon, (iconPosX, iconPosY)) 
 

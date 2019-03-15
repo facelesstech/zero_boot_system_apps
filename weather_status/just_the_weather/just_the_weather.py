@@ -16,7 +16,7 @@ iconFlag = True
 
 showIt = 0
 getWeather = 0
-newCurrent
+newCurrent = 0
 
 # Read API key from file
 target = open("/home/pi/zero_boot_system_apps/weather_status/just_the_weather/api_key.txt")

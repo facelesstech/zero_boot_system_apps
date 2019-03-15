@@ -16,6 +16,7 @@ iconFlag = True
 
 showIt = 0
 getWeather = 0
+newCurrent
 
 # Read API key from file
 target = open("/home/pi/zero_boot_system_apps/weather_status/just_the_weather/api_key.txt")
@@ -147,6 +148,7 @@ while True:
 
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
+            newCurrent = "cloudy"
 
         elif current.summary == "Breezy and Partly Cloudy":
             newCurrentFirst = "Breezy and"
@@ -201,6 +203,10 @@ while True:
             textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
             screen.blit(textSummary,(10,80)) # Draw text
 
+        iconLoad = pygame.image.load(icon_mapping(newCurrent.icon, 256))# Load up the photo you just took
+        scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
+        screen.blit(scaleIcon, (iconPosX, iconPosY)) 
+
 #        if iconFlag == True:
 #
 #            iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
@@ -208,14 +214,10 @@ while True:
 #            screen.blit(scaleIcon, (iconPosX, iconPosY)) 
 #            
 #        else:
-#
-#            iconLoad = pygame.image.load(icon_mapping(newCurrent.icon, 256))# Load up the photo you just took
-#            scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
-#            screen.blit(scaleIcon, (iconPosX, iconPosY)) 
 
-        iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
-        scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
-        screen.blit(scaleIcon, (iconPosX, iconPosY)) 
+#        iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
+#        scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen
+#        screen.blit(scaleIcon, (iconPosX, iconPosY)) 
 
 ### Temp section
     convertTemp = 0

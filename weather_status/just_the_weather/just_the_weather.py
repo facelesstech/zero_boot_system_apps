@@ -200,7 +200,8 @@ while True:
         else:
 #            iconFlag = True
 #            iconFlag = False
-            textSummary = myFontSmall.render(current, True, white) # Draw text
+            newCurrent = current.summary
+            textSummary = myFontSmall.render(newCurrent, True, white) # Draw text
             screen.blit(textSummary,(10,80)) # Draw text
 
         iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took

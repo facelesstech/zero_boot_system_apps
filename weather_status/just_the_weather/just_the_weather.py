@@ -158,6 +158,15 @@ while True:
             screen.blit(textSummarySecond,(10,110)) # Draw text
             current.icon = 'partly-cloudy-day'
 
+        elif current.summary == "Breezy and Foggy":
+            newCurrentFirst = "Breezy "
+            newCurrentSecond = "and Foggy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+            current.icon = 'fog'
+
         elif current.summary == "Windy and Partly Cloudy":
             newCurrentFirst = "Windy and"
             newCurrentSecond = "Partly Cloudy"
@@ -166,6 +175,15 @@ while True:
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
             current.icon = 'partly-cloudy-day'
+
+        elif current.summary == "Windy and Overcast":
+            newCurrentFirst = "Windy "
+            newCurrentSecond = "and Overcast"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+            current.icon = 'wind'
 
         elif current.summary == "Windy and Mostly Cloudy":
             newCurrentFirst = "Windy and"
@@ -183,7 +201,16 @@ while True:
             screen.blit(textSummaryFirst,(10,80)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,110)) # Draw text
-            current.icon = 'partly-cloudy-day'
+            current.icon = 'wind'
+
+        elif current.summary == "Dangerously Windy and Mostly Cloudy":
+            newCurrentFirst = "Dangerously Windy and"
+            newCurrentSecond = "Mostly Cloudy"
+            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            screen.blit(textSummaryFirst,(10,80)) # Draw text
+            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,110)) # Draw text
+            current.icon = 'wind'
 
         elif current.summary == "Light Rain and Windy":
 #            iconFlag = False 

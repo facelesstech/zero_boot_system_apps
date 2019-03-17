@@ -118,6 +118,8 @@ while True:
         string_temp = "%.1fC" % current.temperature
         string_feeltemp = "%.1fC" % current.apparentTemperature
 
+        print string_temp
+        print string_feeltemp
 #        string_summary = "%" % current.summary
         getWeather = 1 
             

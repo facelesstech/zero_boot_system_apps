@@ -74,6 +74,7 @@ cam_height = 320
 pygame.init() # Start pygame
 pygame.font.init() # you have to call this at the start, 
                    # if you want to use this module.
+myFontTiny = pygame.font.SysFont('freesansbold.ttf', 20)
 myFontSmall = pygame.font.SysFont('freesansbold.ttf', 40)
 myFontMid = pygame.font.SysFont('freesansbold.ttf', 50)
 myFontBig = pygame.font.SysFont('freesansbold.ttf', 70)
@@ -104,6 +105,7 @@ while True:
         forecast = forecastio.load_forecast(api_key, lat, lng)
         byHour = forecast.hourly()
         current = forecast.currently()
+        current.summary = "Light Rain and Windy"
 #        print byHour.summary
 #        print byHour.icon
 #        print byHour.temperature
@@ -140,7 +142,11 @@ while True:
         tempText = myFontSmall.render("Temp", True, white) # Draw text
         screen.blit(tempText,(10,40)) # Draw text
         textTemp = myFontMid.render(string_temp, True, white) # Draw text
-        screen.blit(textTemp,(100,40)) # Draw text
+
+        feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
+        screen.blit(feelsTempText,(10,80)) # Draw text
+        textFeelTemp = myFontMid.render(string_feeltemp, True, white) # Draw text
+        screen.blit(textFeelTemp,(100,80)) # Draw text       screen.blit(textTemp,(100,40)) # Draw text
 
         if current.summary == "Breezy and Mostly Cloudy":
             newCurrentFirst = "Breezy and"
@@ -219,14 +225,16 @@ while True:
             newCurrentFirst = "Light Rain"
             newCurrentSecond = "and Windy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,80)) # Draw text
-            textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
-            screen.blit(textSummarySecond,(10,110)) # Draw text
+#            screen.blit(textSummaryFirst,(10,80)) # Draw text
+            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            textSummarySecond = myFontTiny.render(newCurrentSecond, True, white) # Draw text
+            screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'wind'
 
         else:
-            textSummary = myFontSmall.render(current.summary, True, white) # Draw text
-            screen.blit(textSummary,(10,80)) # Draw text
+            textSummary = myFontTiny.render(current.summary, True, white) # Draw text
+#            screen.blit(textSummary,(10,80)) # Draw text
+            screen.blit(textSummary,(10,120)) # Draw text
 
         iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
         scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen

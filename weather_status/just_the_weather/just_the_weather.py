@@ -105,7 +105,7 @@ while True:
         forecast = forecastio.load_forecast(api_key, lat, lng)
         byHour = forecast.hourly()
         current = forecast.currently()
-        current.summary = "Light Rain and Windy"
+#        current.summary = "Light Rain and Windy" ### Test weather conditions
 #        print byHour.summary
 #        print byHour.icon
 #        print byHour.temperature

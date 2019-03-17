@@ -142,6 +142,7 @@ while True:
         tempText = myFontSmall.render("Temp", True, white) # Draw text
         screen.blit(tempText,(10,40)) # Draw text
         textTemp = myFontMid.render(string_temp, True, white) # Draw text
+        screen.blit(textTemp,(100,40)) # Draw text
 
         feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
         screen.blit(feelsTempText,(10,80)) # Draw text
@@ -224,15 +225,15 @@ while True:
 #            iconFlag = False 
             newCurrentFirst = "Light Rain"
             newCurrentSecond = "and Windy"
-            textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
+            textSummaryFirst = myFontTopbar.render(newCurrentFirst, True, white) # Draw text
 #            screen.blit(textSummaryFirst,(10,80)) # Draw text
             screen.blit(textSummaryFirst,(10,120)) # Draw text
-            textSummarySecond = myFontTiny.render(newCurrentSecond, True, white) # Draw text
+            textSummarySecond = myFontTopbar.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'wind'
 
         else:
-            textSummary = myFontTiny.render(current.summary, True, white) # Draw text
+            textSummary = myFontTopbar.render(current.summary, True, white) # Draw text
 #            screen.blit(textSummary,(10,80)) # Draw text
             screen.blit(textSummary,(10,120)) # Draw text
 

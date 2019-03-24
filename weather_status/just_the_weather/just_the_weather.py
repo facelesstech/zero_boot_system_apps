@@ -25,8 +25,12 @@ read_api = target.read()
 
 import forecastio
 api_key = read_api 
-lat = 53.2052792
-lng = -2.9350749
+lat_target = open("/home/pi/zero_boot_system_apps/weather_status/local/lat.txt")
+lat = lat_target.read()
+lng_target = open("/home/pi/zero_boot_system_apps/weather_status/local/lng.txt")
+lng = lng_target.read()
+#lat = 53.2052792
+#lng = -2.9350749
 
 counter = 900
 #counter = 10

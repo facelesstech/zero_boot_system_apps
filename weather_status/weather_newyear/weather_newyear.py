@@ -34,7 +34,8 @@ showIt = 0
 getWeather = 0
 
 # Read API key from file
-target = open("/home/pi/zero_boot_system_apps/weather_status/weather_newyear/api_key.txt")
+#target = open("/home/pi/zero_boot_system_apps/weather_status/weather_newyear/api_key.txt")
+target = open("/home/pi/zero_boot_system_apps/weather_status/API_key/api_key.txt")
 read_api = target.read()
 
 import forecastio
@@ -180,17 +181,6 @@ while True:
         screen.blit(tempText,(10,40)) # Draw text
         textTemp = myFontMid.render(string_temp, True, white) # Draw text
         screen.blit(textTemp,(100,40)) # Draw text
-
-#        feelsTempText = myFontSmall.render("Feels", True, white) # Draw text
-#        screen.blit(feelsTempText,(10,80)) # Draw text
-#        textFeelTemp = myFontMid.render(string_temp, True, white) # Draw text
-#        screen.blit(textFeelTemp,(100,80)) # Draw text
-#
-#        textSummary = myFontSmall.render(current.summary, True, white) # Draw text
-#        screen.blit(textSummary,(10,120)) # Draw text
-
-#        textExit = smallfont.render("exit", True, white) # Draw text
-#        screen.blit(textExit,(430,290)) # Draw text
 
         if current.summary == "Breezy and Mostly Cloudy":
             newCurrentFirst = "Breezy and"

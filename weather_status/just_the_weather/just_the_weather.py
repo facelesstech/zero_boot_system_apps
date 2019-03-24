@@ -19,18 +19,19 @@ getWeather = 0
 #current.icon = 0
 
 # Read API key from file
-#target = open("/home/pi/zero_boot_system_apps/weather_status/just_the_weather/api_key.txt")
 target = open("/home/pi/zero_boot_system_apps/weather_status/API_key/api_key.txt")
 read_api = target.read()
 
 import forecastio
 api_key = read_api 
+
+# Read lat from file
 lat_target = open("/home/pi/zero_boot_system_apps/weather_status/local/lat.txt")
 lat = lat_target.read()
+
+# Read lng from file
 lng_target = open("/home/pi/zero_boot_system_apps/weather_status/local/lng.txt")
 lng = lng_target.read()
-#lat = 53.2052792
-#lng = -2.9350749
 
 counter = 900
 #counter = 10

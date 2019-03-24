@@ -39,8 +39,6 @@ read_api = target.read()
 
 import forecastio
 api_key = read_api 
-#lat = 53.2052792
-#lng = -2.9350749
 
 # Read lat from file
 lat_target = open("/home/pi/zero_boot_system_apps/weather_status/local/lat.txt")

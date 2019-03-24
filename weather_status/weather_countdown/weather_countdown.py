@@ -34,7 +34,8 @@ showIt = 0
 getWeather = 0
 
 # Read API key from file
-target = open("/home/pi/zero_boot_system_apps/weather_status/weather_countdown/api_key.txt")
+#target = open("/home/pi/zero_boot_system_apps/weather_status/weather_countdown/api_key.txt")
+target = open("/home/pi/zero_boot_system_apps/weather_status/API_key/api_key.txt")
 read_api = target.read()
 
 import forecastio

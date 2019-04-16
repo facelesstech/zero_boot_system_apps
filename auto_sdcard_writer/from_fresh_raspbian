@@ -1,0 +1,2 @@
+#! /bin/bash
+sudo umount /dev/sda && sudo parted /dev/sda rm 1 && sudo mkfs.vfat -F 32 /dev/sda && sudo dd if=/home/pi/zero_boot_system_apps/auto_sdcard_writer/raspbian_img/2019-04-08-raspbian-stretch.img of=/dev/sda && sudo sync && sudo reboot

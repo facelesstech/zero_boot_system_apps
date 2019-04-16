@@ -1,0 +1,2 @@
+#! /bin/bash
+sudo umount /dev/sda1 && sudo umount /dev/sda2 && sudo parted /dev/sda rm 1 && sudo parted /dev/sda rm 2 && sudo mkfs.vfat -F 32 /dev/sda && sudo dd if=/home/pi/zero_boot_system_apps/auto_sdcard_writer/retropie_img/retropie-4.4-rpi1_zero.img of=/dev/sda && sudo sync && sudo reboot

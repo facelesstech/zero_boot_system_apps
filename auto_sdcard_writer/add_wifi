@@ -1,0 +1,2 @@
+#! /bin/bash
+cp /home/pi/zero_boot_system_apps/auto_sdcard_writer/wifi_stuff/ssh /media/pi/boot/ && cp /home/pi/zero_boot_system_apps/auto_sdcard_writer/wifi_stuff/wpa_supplicant.conf /media/pi/boot/ && sudo umount /dev/sda1 && sudo umount /dev/sda2

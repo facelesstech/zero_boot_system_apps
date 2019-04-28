@@ -72,7 +72,7 @@ while True:
     CPU_temp = getCPUtemperature()
     CPU_usage = getCPUuse()
 #    print "CPU Temp %sC" % CPU_temp
-#    print "CPU %s%%" % CPU_usage
+    print "CPU %s%%" % CPU_usage
     RAM_stats = getRAMinfo()
     RAM_total = round(int(RAM_stats[0]) / 1000,1)
     RAM_used = round(int(RAM_stats[1]) / 1000,1)

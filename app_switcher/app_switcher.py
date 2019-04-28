@@ -52,7 +52,7 @@ while True:
         screen.blit(textsurface,(50,85)) # Draw text
         pygame.draw.rect(screen, black, [10, 40, 220, 125], 2)
 
-        textsurface = mediumfont.render("breathalyzer", True, black) # Draw text
+        textsurface = mediumfont.render("Breathalyzer", True, black) # Draw text
         screen.blit(textsurface,(260,85)) # Draw text
         pygame.draw.rect(screen, black, [250, 40, 220, 125], 2)
 

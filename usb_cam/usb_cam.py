@@ -16,6 +16,7 @@ def camstream():
     camera.start()
     screen = pygame.surface.Surface(SIZE, 0, display)
     capture = True
+    pygame.mouse.set_visible(False) # Turned off the mouse pointer
     while capture:
         screen = camera.get_image(screen)
         display.blit(screen, (0,0))

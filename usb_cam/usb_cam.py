@@ -9,7 +9,7 @@ FILENAME = 'capture.png'
 
 def camstream():
     pygame.init()
-    pygame.camera.init()
+    pygame.mouse.set_visible(False) # Turned off the mouse pointer   pygame.camera.init()
     display = pygame.display.set_mode(scaleSize, pygame.NOFRAME)
     camera = pygame.camera.Camera(DEVICE, SIZE)
     camera.start()

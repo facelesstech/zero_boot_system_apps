@@ -57,7 +57,7 @@ while True:
         pygame.draw.rect(screen, black, [250, 40, 220, 125], 2)
 
         textsurface = mediumfont.render("USB camera", True, black) # Draw text bottom left
-        screen.blit(textsurface,(50,230)) # Draw text
+        screen.blit(textsurface,(10,230)) # Draw text
         pygame.draw.rect(screen, black, [10, 185, 220, 125], 2)
 
         textsurface = mediumfont.render("", True, black) # Draw text bottom right

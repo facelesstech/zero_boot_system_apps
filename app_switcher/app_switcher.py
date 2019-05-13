@@ -48,19 +48,19 @@ while True:
         pygame.draw.lines(screen, red, True, [[14, 14],[14, 2]], 2) # Draw a triangle
     ### Top bar code end
 
-        textsurface = mediumfont.render("IR Temp", True, black) # Draw text
+        textsurface = mediumfont.render("IR Temp", True, black) # Draw text top left
         screen.blit(textsurface,(50,85)) # Draw text
         pygame.draw.rect(screen, black, [10, 40, 220, 125], 2)
 
-        textsurface = mediumfont.render("Breathalyzer", True, black) # Draw text
+        textsurface = mediumfont.render("Breathalyzer", True, black) # Draw text top right
         screen.blit(textsurface,(260,85)) # Draw text
         pygame.draw.rect(screen, black, [250, 40, 220, 125], 2)
 
-        textsurface = mediumfont.render("", True, black) # Draw text
+        textsurface = mediumfont.render("USB camera", True, black) # Draw text bottom left
         screen.blit(textsurface,(50,230)) # Draw text
         pygame.draw.rect(screen, black, [10, 185, 220, 125], 2)
 
-        textsurface = mediumfont.render("", True, black) # Draw text
+        textsurface = mediumfont.render("", True, black) # Draw text bottom right
         screen.blit(textsurface,(260,230)) # Draw text
         pygame.draw.rect(screen, black, [250, 185, 220, 125], 2)
 
@@ -95,7 +95,7 @@ while True:
 
             if y > 160 and y < 320 and x >0 and x < 240: # Bottom left
                 print("Bottom left")
-#                call(["sudo", "python", "/home/pi/zero_boot_system_apps/pialyzer/pialyzer.py"])
+                call(["sudo", "python", "/home/pi/zero_boot_system_apps/usb_cam/usb_cam.py"])
 
             if y > 160 and y < 320 and x >240 and x < 480: # Bottom right 
                 print("Bottom right")

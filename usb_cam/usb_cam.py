@@ -9,12 +9,12 @@ FILENAME = 'capture.png'
 
 def camstream():
     pygame.init()
-    pygame.mouse.set_visible(False) # Turned off the mouse pointer   pygame.camera.init()
     display = pygame.display.set_mode(scaleSize, pygame.NOFRAME)
     camera = pygame.camera.Camera(DEVICE, SIZE)
     camera.start()
     screen = pygame.surface.Surface(SIZE, 0, display)
     capture = True
+    pygame.mouse.set_visible(False) # Turned off the mouse pointer   pygame.camera.init()
     while capture:
         screen = camera.get_image(screen)
         display.blit(screen, (0,0))

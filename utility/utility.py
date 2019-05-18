@@ -149,15 +149,15 @@ while True:
 #                call(["git", "pull"])
                 proc = Popen(["git pull"], stdout=PIPE, shell=True) # Run comman and send it to stdout and stder
                 out, err = proc.communicate()  # Read data from stdout and stderr
-                print out
+#                print out
                 updaterStrip =  out.rstrip('\n')
-                print updaterStrip
+#                print updaterStrip
                 if updaterStrip == "Already up-to-date.":
-                    print "not updated"
+#                    print "not updated"
                     updateFlag = 0
                 else:
                     updateFlag = 1 
-                    print "updated"
+#                    print "updated"
 
             if y > 260 and y < 320 and x >240 and x < 480: # Bottom right 
                 print("Bottom right")

@@ -383,3 +383,7 @@ while True:
             if y > 0 and y < 50 and x > 0 and x < 50: # Top left
                 print("shutdown")
                 call(["sudo", "shutdown", "-h", "now" ])
+            if y > 0 and y < 25 and x > 60 and x < 420: # Top left
+                print("util")
+                call(["sudo", "python", "/home/pi/zero_boot_system_apps/utility/utility.py"])
+

@@ -106,7 +106,7 @@ while True:
         pygame.draw.rect(screen, red, pygame.Rect(10, 260, 220, 50))
 
     elif updateFlag == 1:
-        pygame.draw.rect(screen, green, pygame.Rect(160, 110, 100, 100))
+        pygame.draw.rect(screen, green, pygame.Rect(10, 260, 220, 50))
 #        print "updated"
 
     textsurface = mediumfont.render("Update", True, black) # Draw text

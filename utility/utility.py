@@ -2,11 +2,11 @@
 
 # Screen stuff
 from pygame.locals import *
-
+from subprocess import Popen, PIPE
 import pygame, os
 from subprocess import call
 import socket
-
+os.chdir("/home/pi/zero_boot_system_apps")
 screen = pygame.display.set_mode((480, 320),pygame.NOFRAME)
 pygame.font.init()
 smallfont = pygame.font.SysFont('freesansbold.ttf', 30)
@@ -25,6 +25,8 @@ black = (0,0,0) # Colours for the red dot
 import time
 
 ipStore = 0
+updaterStrip = 0
+updateFlag = 2
 
 # Return RAM information (unit=kb) in a list                                        
 # Index 0: total RAM                                                                
@@ -72,7 +74,7 @@ while True:
     CPU_temp = getCPUtemperature()
     CPU_usage = getCPUuse()
 #    print "CPU Temp %sC" % CPU_temp
-    print "CPU %s%%" % CPU_usage
+#    print "CPU %s%%" % CPU_usage
     RAM_stats = getRAMinfo()
     RAM_total = round(int(RAM_stats[0]) / 1000,1)
     RAM_used = round(int(RAM_stats[1]) / 1000,1)
@@ -98,6 +100,24 @@ while True:
     screen.blit(textsurface,(10,185)) # Draw text
     textsurface = mediumfont.render("RAM used %sMb" % RAM_used, True, black) # Draw text
     screen.blit(textsurface,(10,220)) # Draw text
+
+    if updateFlag == 0:
+#        print "not updated"
+        pygame.draw.rect(screen, red, pygame.Rect(10, 260, 220, 50))
+
+    elif updateFlag == 1:
+        pygame.draw.rect(screen, green, pygame.Rect(160, 110, 100, 100))
+#        print "updated"
+
+    textsurface = mediumfont.render("Update", True, black) # Draw text
+    screen.blit(textsurface,(65,265)) # Draw text
+    pygame.draw.rect(screen, black, [10, 260, 220, 50], 2)
+
+    textsurface = mediumfont.render("Reboot", True, black) # Draw text
+    screen.blit(textsurface,(300,265)) # Draw text
+    pygame.draw.rect(screen, black, [250, 260, 220, 50], 2)
+    
+
     pygame.display.update()
     
 # Scan touchscreen events
@@ -124,10 +144,21 @@ while True:
                 print("Breath")
 #                call(["sudo", "python", "/home/pi/zero_boot_system_apps/pialyzer/pialyzer.py"])
 
-            if y > 160 and y < 320 and x >0 and x < 240: # Bottom left
+            if y > 260 and y < 320 and x >0 and x < 240: # Bottom left
                 print("Bottom left")
-#                call(["sudo", "python", "/home/pi/zero_boot_system_apps/pialyzer/pialyzer.py"])
+#                call(["git", "pull"])
+                proc = Popen(["git pull"], stdout=PIPE, shell=True) # Run comman and send it to stdout and stder
+                out, err = proc.communicate()  # Read data from stdout and stderr
+                print out
+                updaterStrip =  out.rstrip('\n')
+                print updaterStrip
+                if updaterStrip == "Already up-to-date.":
+                    print "not updated"
+                    updateFlag = 0
+                else:
+                    updateFlag = 1 
+                    print "updated"
 
-            if y > 160 and y < 320 and x >240 and x < 480: # Bottom right 
+            if y > 260 and y < 320 and x >240 and x < 480: # Bottom right 
                 print("Bottom right")
-#                call(["sudo", "python", "/home/pi/zero_boot_system_apps/pialyzer/pialyzer.py"])
+                call(["sudo", "reboot"])

@@ -159,7 +159,7 @@ while True:
             newCurrentFirst = "Breezy and"
             newCurrentSecond = "Mostly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'cloudy'
@@ -168,7 +168,7 @@ while True:
             newCurrentFirst = "Breezy and"
             newCurrentSecond = "Partly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'partly-cloudy-day'
@@ -177,7 +177,7 @@ while True:
             newCurrentFirst = "Breezy "
             newCurrentSecond = "and Foggy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'fog'
@@ -186,7 +186,7 @@ while True:
             newCurrentFirst = "Windy and"
             newCurrentSecond = "Partly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'partly-cloudy-day'
@@ -195,7 +195,7 @@ while True:
             newCurrentFirst = "Windy "
             newCurrentSecond = "and Overcast"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'wind'
@@ -204,7 +204,7 @@ while True:
             newCurrentFirst = "Windy and"
             newCurrentSecond = "Mostly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'cloudy'
@@ -213,7 +213,7 @@ while True:
             newCurrentFirst = "Dangerously Windy and"
             newCurrentSecond = "Partly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'wind'
@@ -222,7 +222,7 @@ while True:
             newCurrentFirst = "Dangerously Windy and"
             newCurrentSecond = "Mostly Cloudy"
             textSummaryFirst = myFontSmall.render(newCurrentFirst, True, white) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontSmall.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'wind'
@@ -233,7 +233,7 @@ while True:
             newCurrentSecond = "and Windy"
             textSummaryFirst = myFontTopbar.render(newCurrentFirst, True, white) # Draw text
 #            screen.blit(textSummaryFirst,(10,80)) # Draw text
-            screen.blit(textSummaryFirst,(10,120)) # Draw text
+            screen.blit(textSummaryFirst,(10,115)) # Draw text
             textSummarySecond = myFontTopbar.render(newCurrentSecond, True, white) # Draw text
             screen.blit(textSummarySecond,(10,140)) # Draw text
             current.icon = 'wind'
@@ -241,7 +241,7 @@ while True:
         else:
             textSummary = myFontSmall.render(current.summary, True, white) # Draw text
 #            screen.blit(textSummary,(10,80)) # Draw text
-            screen.blit(textSummary,(10,120)) # Draw text
+            screen.blit(textSummary,(10,115)) # Draw text
 
         iconLoad = pygame.image.load(icon_mapping(current.icon, 256))# Load up the photo you just took
         scaleIcon = pygame.transform.scale(iconLoad, (iconSizex, iconSizey)) # Scale to fit screen

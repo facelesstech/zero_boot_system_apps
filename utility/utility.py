@@ -68,8 +68,10 @@ while True:
     pygame.draw.ellipse(screen, red, [5, 6, 20, 20], 2) 
     pygame.draw.lines(screen, red, True, [[14, 14],[14, 2]], 2) # Draw a triangle
     ### Top bar code end
-
-    ipStore = ([(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1])
+    try:
+        ipStore = ([(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1])
+    except:
+        pass
 
     CPU_temp = getCPUtemperature()
     CPU_usage = getCPUuse()

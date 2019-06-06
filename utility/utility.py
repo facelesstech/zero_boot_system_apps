@@ -24,7 +24,8 @@ black = (0,0,0) # Colours for the red dot
 
 import time
 
-ipStore = 0
+#ipStore = 0
+ipStore = "0.0.0.0"
 updaterStrip = 0
 updateFlag = 2
 
@@ -53,6 +54,7 @@ def getCPUuse():
 
 while True:
 
+#    stringIP = "%d" % ipStore
     screen.fill(white)
     
     ### Top bar code start
@@ -87,6 +89,7 @@ while True:
 
 ### IP Stuff
     textsurface = mediumfont.render("IP Address %s" % ipStore, True, black) # Draw text
+#    textsurface = mediumfont.render("IP Address %s" % stringIP, True, black) # Draw text
     screen.blit(textsurface,(10,45)) # Draw text
 
 ### CPU Stuff

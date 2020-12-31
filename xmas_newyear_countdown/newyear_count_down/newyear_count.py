@@ -87,7 +87,7 @@ screen = pygame.display.set_mode([cam_width, cam_height],pygame.NOFRAME) # Set u
 #GPIO.add_event_detect(gpio_pin3, GPIO.RISING, callback=buttonStateChanged3,bouncetime=400)
 #
 while True:
-    lastImg = pygame.image.load('/home/pi/xmas_newyear_countdown/newyear_count_down/new_year.jpeg') # Load up the photo you just t    ook
+    lastImg = pygame.image.load('/home/pi/zero_boot_system_apps/xmas_newyear_countdown/newyear_count_down/new_year.jpeg') # Load up the photo you just t    ook
 #    scalePhoto = pygame.transform.scale(lastImg, (320, 240)) # Scale to fit scr    een
     scalePhoto = pygame.transform.scale(lastImg, (480, 320)) # Scale to fit scr    een
     screen.blit(scalePhoto, (0,0))
